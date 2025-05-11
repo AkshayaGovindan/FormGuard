@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormGuard</title>
+    <link rel="stylesheet" href="FormGuard.css">
+    <script src="https://kit.fontawesome.com/8c43be3d67.js" crossorigin="anonymous"></script></head>
+
+<body>
+    <div class="container">
+        <form id="myForm" action="FormGuard.php" method="POST">
+            <i class="fas fa-paper-plane"></i>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Mobile number</label>
+                <input type="tel" name="mobile" placeholder="Enter your number" id="mobile-name" onkeyup="validateMobile()">
+                <span id="mobile-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Mail id</label>
+                <input type="email" name="email" placeholder="Enter your mail id" id="mail-name" onkeyup="validateMail()">
+                <span id="mail-error"></span>
+            </div>
+            <div class="input-group">
+                <label>Your Message</label>
+                <textarea rows="3" name="message" placeholder="Enter your message here" id="message-name" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+            </div>
+            <button type="submit" onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+        </form>
+    </div>
+    <script src="FormGuard.js"></script>
+</body>
+</html>
